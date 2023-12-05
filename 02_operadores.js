@@ -90,16 +90,16 @@ console.log("<----- Operadores logicos ----->");
 
 // AND
 
-const name = "Jordan";
+const namee = "Jordan";
 const edad = "12";
 const isPublic = true;
 console.log(isLoading && isPublic); // && es como un y. Ambos tienen que ser true para que la condicion se cumpla. Esto es como un and
-console.log(name ===  "" && edad === 0);
+console.log(namee ===  "" && edad === 0);
 
 // OR
 
 console.log(isLoading || isPublic); // || es como un o. Si uno es true ambos pasan a ser true. Es omo un or
-console.log(name === "" || edad === 0);
+console.log(namee === "" || edad === 0);
 // Tambien puede ser una variable const isValid = nombre === "" || edad === 0;
 
 //NOT
