@@ -408,6 +408,4 @@ realizarOperacion(5, 2, function (param1, param2) { // Otra forma de hacerlo, pa
 });
 
 
-
-
 console.log("FINAL PASAR FUNCION COMO PARAMETRO");
