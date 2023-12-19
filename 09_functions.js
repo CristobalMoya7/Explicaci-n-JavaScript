@@ -306,3 +306,108 @@ console.log(`Lista impar: ${listaImpar}`);
 
 
 console.log("FINAL ARROW FUNCTION");
+
+// CIERRES
+console.log("CIERRES");
+
+// Los cierres nos permite crear una funcion con variables dentro, a las cuales pondamos acceder y esta variables tenga un ambito seleccionado
+
+const counter = () => {
+    let count = 0;
+    const increment = () => {
+        count += 1;
+    };
+
+    const getCount = () => {
+        return count;
+    }
+    return {increment, getCount};
+};
+
+// Aqui cada variable tiene su valor independiente
+
+const counterBreak = counter();
+counterBreak.increment();
+counterBreak.increment();
+counterBreak.increment();
+console.log(counterBreak.getCount());
+const counterNextClass = counter();
+counterNextClass.increment();
+counterNextClass.increment();
+console.log(counterNextClass.getCount());
+
+// EJERCICIO CALCULADORA
+
+/*
+const miCalculadora = calculadora();
+
+console.log(miCalculadora.sumar(5));    
+console.log(miCalculadora.restar(2));   
+console.log(miCalculadora.multiplicar(4));
+console.log(miCalculadora.dividir(2));
+console.log(miCalculadora.sumar(10));
+console.log(miCalculadora.total())// Debería imprimir 16
+*/
+
+
+const calculator = () => {
+    let result = 0; // Cambiado de const a let
+
+    const sumar = (num) => result += num;
+    const restar = (num) => result -= num;
+    const multiplicar = (num) => result *= num;
+    const dividir = (num) => result /= num;
+    const total = () => result;
+
+    return { sumar, restar, multiplicar, dividir, total };
+};
+
+const miCalculadora = calculator();
+console.log(miCalculadora.sumar(5));
+console.log(miCalculadora.restar(2));
+console.log(miCalculadora.multiplicar(4));
+console.log(miCalculadora.dividir(2));
+console.log(miCalculadora.sumar(10));
+console.log(`RESULTADO FINAL: ${miCalculadora.total()}`);
+
+console.log("FINAL CIERRES");
+
+//Pasar como parametro una funcion
+
+console.log("PASAR FUNCION COMO PARAMETRO");
+
+const foo = (param) => {
+    param(); // Esto seria una funcion de otra parte
+};
+
+
+// ESTA FORMA SERIA VALIDA PERO ESTARIA MEJOR CON OTRA FUNCION, ABAJO EL EJEMPLO
+
+const realizarOperacionV1 = (num1, num2, operacion) => {
+    if (operacion === "suma") return num1 + num2;
+    else if (operacion === "resta") return num1 - num2;
+};
+
+const result = realizarOperacionV1(1, 2, "suma");
+console.log(result);
+
+// FORMA CORRECTA
+
+const realizarOperacion = (num1, num2, operacion) => {
+    return operacion(num1, num2);
+};
+
+const summ = (num1, num2) => num1 + num2;
+const dividir = (num1, num2) => num1 / num2;
+
+realizarOperacion(5, 2, summ); // Aqui ponemos la funcion que queremos usar
+realizarOperacion(5, 2, dividir);
+realizarOperacion(5, 2, (num1, num2) => num1 / num2); // Esto seria otra forma valida, es una funcion anonima, mas abajo explicado
+realizarOperacion(5, 2, function (param1, param2) { // Otra forma de hacerlo, pasando una funcion como parametro en otra funcion
+    return param1 - param2;
+});
+
+
+
+
+console.log("FINAL PASAR FUNCION COMO PARAMETRO");
