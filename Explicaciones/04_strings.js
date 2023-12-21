@@ -71,18 +71,18 @@ if (isNaN(temperatura)) {
 
 // 1º 
 let temp = parseFloat(prompt("Ingresa la temperatura:"));
-let escala = prompt("Ingresa la escala a la que quieras cambiar tu temperatura (C o K)").trim();
+let escala1 = prompt("Ingresa la escala a la que quieras cambiar tu temperatura (C o K)").trim();
 let esc = ""
 
 if (typeof temp === "number" && !Number.isNaN(temp)) {
-    if (escala.toUpperCase() === "C") {
+    if (escala1.toUpperCase() === "C") {
         temp = temp - 273.15;
         esc = "Celsius"
     } else {
         temp = temp + 273.15;
         esc = "Kelvin"
     }
-    console.log(`La temperatura en ${esc} es: ${temp}º${escala.toUpperCase()}`)
+    console.log(`La temperatura en ${esc} es: ${temp}º${escala1.toUpperCase()}`)
 } else{
     console.log("La temperatura ha de ser un número.")
 }
