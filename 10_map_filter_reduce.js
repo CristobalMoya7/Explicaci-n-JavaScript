@@ -188,3 +188,40 @@ const result = numbers.forEach((item) => {
 // UNA FORMA DE USAR TODO ESTO:
 const resultado = numbers.filter(item => item > 20).map(item => item * 2); // Aqui tendriamos los mayores de 20 multiplicados X2
 console.log(resultado);
+
+// TRANSACTION
+// CREAR UNA FUNCION LA CUAL NOS PERMITA A TRAVES DE UN PARAMETRO ENCONTRAR CUALQUIER TRANSACCION
+
+const transactions = [
+    { id: 'trx001', amount: 100, description: 'Splurge on a fancy gadget', category: 'Electronics' },
+    { id: 'trx002', amount: 50, description: 'Treat yourself to a cozy meal', category: 'Food' },
+    { id: 'trx003', amount: 200, description: 'Indulge in a shopping spree', category: 'Fashion' },
+    { id: 'trx002', amount: 75, description: 'Explore a new bookshop', category: 'Books' },
+    { id: 'trx001', amount: 120, description: 'Upgrade your workout gear', category: 'Fitness' },
+  ];
+
+  // RESULTADO EJERCICIO: FIND: NOS DEVUELVE EL ELEMENTO ENCONTRADO
+  // USAMOS THROW PARA LANZAR UN ERROR
+  
+  const getTransaction = (list, id) => {
+    const transaction = list.find((item) => {
+      return item.id === id;
+    });
+    if (transaction === undefined) {
+      const error = new Error('Error transaction');
+      error.type = 'NOT_FOUND';
+      throw error;
+    }
+    return transaction;
+  };
+  
+// TRY SIRVE PARA CAPTURAR LOS ERRORES Y ASI QUE EL CODIGO NO SE PARE
+
+  try {
+    const transaction = getTransaction(transactions, 'trx008');
+  } catch (error) {
+    console.log(error.type);
+  }
+  
+//console.log(getTransaction(transactions, "trx008"));
+//console.log("Fin");
