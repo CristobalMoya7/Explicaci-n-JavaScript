@@ -1,0 +1,77 @@
+[33mcommit 5ba64359e8beec576ad53b4a43bf75ba916e731a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Cristobal Moya <CristobalMoyaLorente00@gmail.com>
+Date:   Thu Dec 21 21:30:11 2023 +0100
+
+     Nuevos cambios archivo 10
+
+[33mcommit fd53a69638e14be6dfce74598fb16689ec59199c[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Cristobal Moya <CristobalMoyaLorente00@gmail.com>
+Date:   Tue Dec 19 23:14:09 2023 +0100
+
+    Subimos nuevos cambios y añadimos map, filter y alguna explicacion extra
+
+[33mcommit 47d1908c894483b4f37b6565bedca188fac33d3c[m
+Author: Cristobal Moya <CristobalMoyaLorente00@gmail.com>
+Date:   Tue Dec 19 21:40:09 2023 +0100
+
+    Actualizamos 09_functions de JS
+
+[33mcommit 2abed3f138ad3bb696a67d83c8480c5f0bf86186[m
+Author: Cristobal Moya <CristobalMoyaLorente00@gmail.com>
+Date:   Sun Dec 17 17:33:07 2023 +0100
+
+    Añadimos function y hacemos ejercicio
+
+[33mcommit d38e8171d84a0704c7d8341263c38fb5f64e45b9[m
+Author: Cristobal Moya <CristobalMoyaLorente00@gmail.com>
+Date:   Fri Dec 15 20:22:13 2023 +0100
+
+    Añadimos la parte de objetos
+
+[33mcommit 604282e71d1e42b3f69c47afd37bbbdba66e3e83[m
+Author: Cristobal Moya <CristobalMoyaLorente00@gmail.com>
+Date:   Thu Dec 7 23:02:47 2023 +0100
+
+    Añadimos 07_Objects pero sin terminar
+
+[33mcommit ad17391c34cb0e2c2e509a6dcb685cc36bd927e5[m
+Author: Cristobal Moya <CristobalMoyaLorente00@gmail.com>
+Date:   Thu Dec 7 22:32:44 2023 +0100
+
+    Añadimos 06_bucles
+
+[33mcommit 624b275cd6abb866916ffe712cef49af6c9ae898[m
+Author: Cristobal Moya <CristobalMoyaLorente00@gmail.com>
+Date:   Tue Dec 5 22:56:57 2023 +0100
+
+    Añadimos archivo 05_arrays
+
+[33mcommit aeda3ef9ce483b1dfd05d6e7aeb212947103c7d9[m
+Author: Cristobal Moya <CristobalMoyaLorente00@gmail.com>
+Date:   Tue Dec 5 21:57:05 2023 +0100
+
+    Añadimos carpeta 04_strings
+
+[33mcommit 781974c3ec1102091990fc830880ba058c33d4e1[m
+Author: Cristobal Moya <CristobalMoyaLorente00@gmail.com>
+Date:   Tue Dec 5 20:38:38 2023 +0100
+
+    Añado 03_control, explicacion de if, else, switch, ternarios...
+
+[33mcommit f301cce6380af8047315cfdc363ff342dadd936c[m
+Author: Cristobal Moya <CristobalMoyaLorente00@gmail.com>
+Date:   Mon Dec 4 23:00:26 2023 +0100
+
+    Añadimos 02_operadores
+
+[33mcommit 629827fc555d156bad9527d1d8ef407aa3db7564[m
+Author: Cristobal Moya <CristobalMoyaLorente00@gmail.com>
+Date:   Mon Dec 4 21:49:27 2023 +0100
+
+    Añado archivo Type y explicacion de los tipos + ejercicio
+
+[33mcommit ee56e4db1abcabd82105b02b1bcdba1c4b1d354a[m
+Author: Cristobal Moya <CristobalMoyaLorente00@gmail.com>
+Date:   Mon Dec 4 20:32:40 2023 +0100
+
+    Primer commit, repasamos variables

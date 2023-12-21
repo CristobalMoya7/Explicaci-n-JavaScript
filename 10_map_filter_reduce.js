@@ -191,7 +191,6 @@ console.log(resultado);
 
 // TRANSACTION
 // CREAR UNA FUNCION LA CUAL NOS PERMITA A TRAVES DE UN PARAMETRO ENCONTRAR CUALQUIER TRANSACCION
-
 const transactions = [
     { id: 'trx001', amount: 100, description: 'Splurge on a fancy gadget', category: 'Electronics' },
     { id: 'trx002', amount: 50, description: 'Treat yourself to a cozy meal', category: 'Food' },
@@ -200,10 +199,10 @@ const transactions = [
     { id: 'trx001', amount: 120, description: 'Upgrade your workout gear', category: 'Fitness' },
   ];
 
-  // RESULTADO EJERCICIO: FIND: NOS DEVUELVE EL ELEMENTO ENCONTRADO
-  // USAMOS THROW PARA LANZAR UN ERROR
+// RESULTADO EJERCICIO: FIND: NOS DEVUELVE EL ELEMENTO ENCONTRADO
+// USAMOS THROW PARA LANZAR UN ERROR
   
-  const getTransaction = (list, id) => {
+const getTransaction = (list, id) => {
     const transaction = list.find((item) => {
       return item.id === id;
     });
@@ -213,15 +212,92 @@ const transactions = [
       throw error;
     }
     return transaction;
-  };
+};
   
 // TRY SIRVE PARA CAPTURAR LOS ERRORES Y ASI QUE EL CODIGO NO SE PARE
 
-  try {
+try {
     const transaction = getTransaction(transactions, 'trx008');
   } catch (error) {
     console.log(error.type);
-  }
+};
   
 //console.log(getTransaction(transactions, "trx008"));
 //console.log("Fin");
+
+// REDUCE. ES UN METODO DE ARRAYS. SIRVE PARA CAMBIAR LA ESTRUCTURA ORIGINAL DE UN ARRAY A UNA ESTRUCTURA DISTINTA, POR EJEMPLO, UN ARRAY DE ARRAYS, UN OBJETO, UN NUMERO...
+// PERO NUNCA LO CONVIERTE EN OTRO ARRAY
+
+const totalAmount = transactions.reduce((acum, item) => {
+    console.log("acum; ", acum);
+    console.log("item; ", item);
+    const result = acum + item.amount;
+    return result;
+}, 0); // Este 0 dice el valor inicial que queremos darle ya que como bien hemos dicho, reduce cambia de un array a otra estructura distinta
+
+console.log(totalAmount);
+
+// Queremos obtener todas las transacciones de una ID.
+
+const getTransactions = (list, id) => {
+    return list.filter(item => item.id === id);
+  };
+
+// Otra forma de obtener todas las transacciones de una ID con reduce
+
+const a = { title: 'title' };
+const b = { age: 12 };
+const c = { ...a, ...b }; /// { title: 'title', age: 12 };
+
+const transactionMapped = transactions.reduce((acum, item) => {
+  const transactionList = acum[item.id] ? acum[item.id] : [];
+  return {
+    ...acum,
+    [item.id]: [...transactionList, item],
+  };
+}, {});
+
+console.log(transactionMapped.trx002); // [{}, {}]
+
+console.log(getTransactions(transactions, 'trx002'));  // [{}, {}]
+
+// EJERCICIO
+
+
+const students = [
+  {
+    name: "Juan",
+    age: 20,
+    courses: [
+      {
+        name: "Mates",
+        score: 95
+      },
+      {
+        name: "History",
+        score: 85
+      }
+    ]
+  },
+  {
+    name: "María",
+    age: 22,
+    courses: [
+      {
+        name: "Mates",
+        score: 100
+      },
+      {
+        name: "History",
+        score: 70
+      }
+    ]
+  }
+];
+
+const total = students.map(student => ({
+    nameAge: `${student.name}-${student.age}`,
+    nota: student.courses.reduce((sum, course) => sum + course.score, 0)
+}));
+
+console.log(total);
