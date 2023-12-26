@@ -6,7 +6,87 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- Este es un comentario de una línea -->
+    <!-- tyoe="module": Sirve para poder poner varios index y que no salga error. Esto se usa al conectar varios archivos -->
+    <!--
     <script src="modulos/index.js" type="module"></script>
     <script src="modulos/utils.js" type="module"></script>
-</body>
-</html>
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script>
+      /*
+      axios.get('https://api.tvmaze.com/shows')
+        .then(info => {
+          console.log(info);
+        })
+        .finally(() => {
+  
+        });
+      const main = async () => {
+        let loading;
+        try {
+          loading = true;
+          console.log('Loading....');
+          const info = await axios.get('https://api.tvmaze.com/shows');
+        } catch (error) {
+          console.log('Error con la lista de shows');
+        } finally {
+          loading = false;
+          console.log('No loading...');
+        }
+      };
+      main();
+      */
+      class User {
+        constructor(name) {
+          this.name = name;
+        }
+  
+        sayHi () {
+          console.log(this.name);
+        }
+      }
+  
+      class Student extends User {
+        constructor(name) {
+          super(name);
+          this.courses = [];
+        }
+  
+        getCourses () {
+          console.log(this.courses);
+        }
+      }
+  
+      const testUser = new Student('Keepconding');
+      console.log(testUser);
+  
+      
+  /// dates
+  const currentDate = new Date();
+  
+  console.log(currentDate);
+  console.log(currentDate.getFullYear());
+  console.log(currentDate.getHours());
+  console.log(currentDate.getDate());
+  console.log(currentDate.getDay());
+  console.log(currentDate.getTime());
+  
+  /// regex
+  
+  const texto = "Hola, mi telefono es 123-456-7890 y 223-456-7890";
+  // REGEX
+  let pattern = /\d{3}-\d{3}-(\d{4})/;
+  
+  console.log(pattern.test(texto)); // true o false
+  console.log(texto.match(pattern));
+  console.log(texto.replace(pattern, '***-***-****'));
+  
+  
+    </script>
+    
+  
+    <h2>¡Recuerda abrir la consola del navegador para ver los resultados!</h2>
+    <p>Ejecuta Ctrl + Shift + I en Windows/Linux o Command + Option + I en Mac para abrir la consola.</p>
+  </body>
+  </html>
